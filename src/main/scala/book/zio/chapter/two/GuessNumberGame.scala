@@ -2,6 +2,9 @@ package book.zio.chapter.two
 
 import zio._
 
+// Using the Console and Random services in ZIO,
+// write a little program that asks the user to guess a randomly chosen number between 1 and 3,
+// and prints out if they were correct or not.
 object NumberGuessing extends App {
 
   import zio.console._
