@@ -19,7 +19,6 @@ object FlatMapToForComp {
   val random = ZIO.effect(scala.util.Random.nextInt(3) + 1)
   random.flatMap(int =>
     printLine("Guess a number from 1 to 3:").flatMap(_ =>
-      
       readLine.flatMap(num =>
         if (num == int.toString) printLine("You guessed right!")
         else printLine(s"You guessed wrong, the number was ${int}!")
